@@ -73,6 +73,11 @@ RUN find /etc/service -name run  | xargs chmod +x && \
 EXPOSE 80 443 8090
 VOLUME /data /log
 
+ADD ./bootstrap.json /data/pydio/plugins/boot.conf/bootstrap.json
+ADD ./data /var/www/data
+
+RUN apt-get install mysql-client
+
 # Use baseimage-docker's init system.
 #CMD ["/bin/bash"]
 
