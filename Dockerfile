@@ -46,7 +46,8 @@ RUN add-apt-repository ppa:ondrej/php -y -u && \
 	zip \
 	telnet \
 	nginx \
-	memcached && \
+	memcached \
+	mysql-client && \
 	apt-get -q -y --no-install-recommends purge syslog-ng* openssh-server -y && \
 	apt-get -q -y --no-install-recommends clean && apt-get -q -y --no-install-recommends autoremove -y && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/log/* && \
 	rm -rf /etc/service/sshd /etc/service/syslog-forwarder /etc/service/syslog-ng /etc/my_init.d/00_regen_ssh_host_keys.sh && \
@@ -75,8 +76,6 @@ VOLUME /data /log
 
 ADD ./bootstrap.json /data/pydio/plugins/boot.conf/bootstrap.json
 ADD ./data /var/www/data
-
-RUN apt-get install mysql-client
 
 # Use baseimage-docker's init system.
 #CMD ["/bin/bash"]
