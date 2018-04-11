@@ -38,6 +38,12 @@ ln -s /data/pydio /var/www/pydio/data
 chown -Rf abc:abc /tmp/sess
 chown -Rf abc:abc /var/www/pydio
 chmod -R 770 /tmp/sess
+
+php /var/www/data/update_pydio_hash.php $PYDIO_PASSWORD
+
+echo "Updating DB password"
+mysql -u $PYDIO_DB_USER -p"$PYDIO_DB_PASSWORD" -h $PYDIO_DB_HOST < /var/www/data/user.sql
+
 fi
 
 else
