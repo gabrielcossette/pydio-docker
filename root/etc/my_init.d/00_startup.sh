@@ -29,24 +29,7 @@ file_env 'PYDIO_PASSWORD'
 PUID=${PUID:-911}
 PGID=${PGID:-911}
 
-if [ -f /data/booster/pydioconf.conf ]; then
-
-if [ ! -f /var/www/pydio/data/cache/first_run_passed ]; then
-ln -s /data/pydio /var/www/pydio/data
-/usr/sbin/groupmod -g $PGID abc
-/usr/sbin/usermod -u $PUID -g $PGID abc
-chown -Rf abc:abc /tmp/sess
-chown -Rf abc:abc /var/www/pydio
-chmod -R 770 /tmp/sess
-
-php /var/www/data/update_pydio_hash.php $PYDIO_PASSWORD
-
-echo "Updating DB password"
-mysql -u $PYDIO_DB_USER -p"$PYDIO_DB_PASSWORD" -h $PYDIO_DB_HOST < /var/www/data/user.sql
-
-fi
-
-else
+if [ ! -f /data/booster/pydioconf.conf ]; then
 
 php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD
 
@@ -94,6 +77,13 @@ mysql -u $PYDIO_DB_USER -p"$PYDIO_DB_PASSWORD" -h $PYDIO_DB_HOST < /var/www/data
 mkdir /wp/recycle_bin
 chown abc:abc /wp*
 chown abc:abc /wp/recycle_bin
+
+else
+
+php /var/www/data/update_pydio_hash.php $PYDIO_PASSWORD
+
+echo "Updating DB password"
+mysql -u $PYDIO_DB_USER -p"$PYDIO_DB_PASSWORD" -h $PYDIO_DB_HOST < /var/www/data/user.sql
 
 fi
 
