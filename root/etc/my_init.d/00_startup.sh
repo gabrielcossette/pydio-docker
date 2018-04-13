@@ -29,12 +29,21 @@ file_env 'PYDIO_PASSWORD'
 PUID=${PUID:-911}
 PGID=${PGID:-911}
 
+/usr/sbin/groupmod -g $PGID abc
+/usr/sbin/usermod -u $PUID -g $PGID abc
+ln -s /data/pydio /var/www/pydio/data
+chown -Rf abc:abc /data
+chown -Rf abc:abc /tmp/sess
+chown -Rf abc:abc /var/www/pydio
+chmod -R 770 /tmp/sess
+chmod -R 700 /data/pydio
+chown abc:abc /wp*
+chown abc:abc /wp/recycle_bin
+
 if [ ! -f /data/booster/pydioconf.conf ]; then
 
 php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD
 
-/usr/sbin/groupmod -g $PGID abc
-/usr/sbin/usermod -u $PUID -g $PGID abc
 [ -d /tmp/sess ] || mkdir /tmp/sess/
 [ -d /data/pydio/cache ] || mkdir -p /data/pydio/cache
 [ -d /data/pydio/logs ] || mkdir -p /data/pydio/logs
@@ -46,13 +55,6 @@ php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD
 [ -f /data/booster/pydiocaddy.conf ] || cp /etc/pydiocaddy.conf /data/booster/pydiocaddy.conf
 [ -f /data/booster/pydioconf.conf ] || cp /etc/pydioconf.conf /data/booster/pydioconf.conf
 rm -Rf /var/www/pydio/data
-
-ln -s /data/pydio /var/www/pydio/data
-chown -Rf abc:abc /data
-chown -Rf abc:abc /tmp/sess
-chown -Rf abc:abc /var/www/pydio
-chmod -R 770 /tmp/sess
-chmod -R 700 /data/pydio
 
 array=(/var/www/pydio/data/cache/admin_counted /var/www/pydio/data/cache/diag_result.php /var/www/pydio/data/cache/first_run_passed)
 
@@ -75,8 +77,6 @@ echo "table $TABLENAME does not exist, try to create table..."
 mysql -u $PYDIO_DB_USER -p"$PYDIO_DB_PASSWORD" -h $PYDIO_DB_HOST < /var/www/data/pydio.sql
 
 mkdir /wp/recycle_bin
-chown abc:abc /wp*
-chown abc:abc /wp/recycle_bin
 
 else
 
