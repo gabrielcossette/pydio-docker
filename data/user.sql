@@ -41,7 +41,7 @@ CREATE TABLE `ajxp_users` (
 --
 
 INSERT INTO `ajxp_users` (`login`, `password`, `groupPath`) VALUES
-('admin', 'sha256:1000:SH2I3qCiMqtpKQiiGf16I9GJrZM22q8I:Tib5ZnN0lZDV/DwCC7s0LfZhBxH/myhz', '/');
+('admin', 'sha256:1000:SH2I3qCiMqtpKQiiGf16I9GJrZM22q8I:Tib5ZnN0lZDV/DwCC7s0LfZhBxH/myhz', '/') ON DUPLICATE KEY UPDATE password='sha256:1000:SH2I3qCiMqtpKQiiGf16I9GJrZM22q8I:Tib5ZnN0lZDV/DwCC7s0LfZhBxH/myhz';
 
 -- --------------------------------------------------------
 
