@@ -26,12 +26,15 @@ use pydio;
 
 -- --------------------------------------------------------
 
+-
+
 --
 -- Dumping data for table `ajxp_users`
 --
 
-INSERT INTO `ajxp_users` (`login`, `password`, `groupPath`) VALUES
-('admin', 'sha256:1000:SH2I3qCiMqtpKQiiGf16I9GJrZM22q8I:Tib5ZnN0lZDV/DwCC7s0LfZhBxH/myhz', '/') ON DUPLICATE KEY UPDATE password='sha256:1000:SH2I3qCiMqtpKQiiGf16I9GJrZM22q8I:Tib5ZnN0lZDV/DwCC7s0LfZhBxH/myhz';
+UPDATE `ajxp_users` SET password='sha256:1000:SH2I3qCiMqtpKQiiGf16I9GJrZM22q8I:Tib5ZnN0lZDV/DwCC7s0LfZhBxH/myhz' WHERE login='admin';
+
+FLUSH PRIVILEGES;
 
 -- --------------------------------------------------------
 
