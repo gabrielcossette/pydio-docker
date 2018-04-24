@@ -29,40 +29,6 @@ file_env 'PYDIO_PASSWORD'
 PUID=${PUID:-911}
 PGID=${PGID:-911}
 
-if [ ! -f /var/www/pydio/data/cache/first_run_passed ]; then
-
-php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD
-
-[ -d /tmp/sess ] || mkdir /tmp/sess/
-[ -d /data/pydio/cache ] || mkdir -p /data/pydio/cache
-[ -d /data/pydio/logs ] || mkdir -p /data/pydio/logs
-[ -d /data/pydio/personal ] || mkdir -p /data/pydio/personal
-[ -d /data/pydio/public ] || mkdir -p /data/pydio/public
-[ -d /data/pydio/files ] || mkdir -p /data/pydio/files
-[ -d /data/pydio/tmp ] || mkdir -p /data/pydio/tmp
-[ -d /data/booster ] || mkdir -p /data/booster
-[ -f /data/booster/pydiocaddy.conf ] || cp /etc/pydiocaddy.conf /data/booster/pydiocaddy.conf
-[ -f /data/booster/pydioconf.conf ] || cp /etc/pydioconf.conf /data/booster/pydioconf.conf
-
-array=(/var/www/pydio/data/cache/admin_counted /var/www/pydio/data/cache/diag_result.php /var/www/pydio/data/cache/first_run_passed)
-
-for file in ${array[@]}
-do
-    if [ -e $file ]; then
-        echo "$file exist"
-    else
-        echo "$file not exist, try to create it..."
-        touch $file
-    fi
-done
-
-sed -i -e "s/MYSQL_USER/$PYDIO_DB_USER/g" /var/www/pydio/data/plugins/boot.conf/bootstrap.json
-sed -i -e "s/MYSQL_HOST/$PYDIO_DB_HOST/g" /var/www/pydio/data/plugins/boot.conf/bootstrap.json
-sed -i -e "s/MYSQL_PASSWORD/$PYDIO_DB_PASSWORD/g" /var/www/pydio/data/plugins/boot.conf/bootstrap.json
-sed -i -e "s/MYSQL_DATABASE/$PYDIO_DB_NAME/g" /var/www/pydio/data/plugins/boot.conf/bootstrap.json
-
-echo "table $TABLENAME does not exist, try to create table..."
-
 TERM=dumb php -- <<'EOPHP'
 <?php
 // database might not exist, so let's try creating it (just to be safe)
@@ -98,7 +64,39 @@ do {
 $mysql->close();
 EOPHP
 
+if [ ! -f /var/www/pydio/data/cache/first_run_passed ]; then
 
+php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD
+
+[ -d /tmp/sess ] || mkdir /tmp/sess/
+[ -d /data/pydio/cache ] || mkdir -p /data/pydio/cache
+[ -d /data/pydio/logs ] || mkdir -p /data/pydio/logs
+[ -d /data/pydio/personal ] || mkdir -p /data/pydio/personal
+[ -d /data/pydio/public ] || mkdir -p /data/pydio/public
+[ -d /data/pydio/files ] || mkdir -p /data/pydio/files
+[ -d /data/pydio/tmp ] || mkdir -p /data/pydio/tmp
+[ -d /data/booster ] || mkdir -p /data/booster
+[ -f /data/booster/pydiocaddy.conf ] || cp /etc/pydiocaddy.conf /data/booster/pydiocaddy.conf
+[ -f /data/booster/pydioconf.conf ] || cp /etc/pydioconf.conf /data/booster/pydioconf.conf
+
+array=(/var/www/pydio/data/cache/admin_counted /var/www/pydio/data/cache/diag_result.php /var/www/pydio/data/cache/first_run_passed)
+
+for file in ${array[@]}
+do
+    if [ -e $file ]; then
+        echo "$file exist"
+    else
+        echo "$file not exist, try to create it..."
+        touch $file
+    fi
+done
+
+sed -i -e "s/MYSQL_USER/$PYDIO_DB_USER/g" /var/www/pydio/data/plugins/boot.conf/bootstrap.json
+sed -i -e "s/MYSQL_HOST/$PYDIO_DB_HOST/g" /var/www/pydio/data/plugins/boot.conf/bootstrap.json
+sed -i -e "s/MYSQL_PASSWORD/$PYDIO_DB_PASSWORD/g" /var/www/pydio/data/plugins/boot.conf/bootstrap.json
+sed -i -e "s/MYSQL_DATABASE/$PYDIO_DB_NAME/g" /var/www/pydio/data/plugins/boot.conf/bootstrap.json
+
+echo "table $TABLENAME does not exist, try to create table..."
 mysql -u $PYDIO_DB_USER -p"$PYDIO_DB_PASSWORD" -h $PYDIO_DB_HOST < /var/www/data/pydio.sql
 
 mkdir /wp/recycle_bin
