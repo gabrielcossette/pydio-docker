@@ -29,12 +29,6 @@ file_env 'PYDIO_PASSWORD'
 PUID=${PUID:-911}
 PGID=${PGID:-911}
 
-if [ ! -f /root/first_run_image_passed ]; then
-	rm -Rf /var/www/pydio/data
-	ln -s /data/pydio /var/www/pydio/data
-	touch /root/first_run_image_passed
-fi
-
 if [ ! -f /var/www/pydio/data/cache/first_run_passed ]; then
 
 php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD

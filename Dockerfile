@@ -56,6 +56,7 @@ RUN add-apt-repository ppa:ondrej/php -y -u && \
 RUN  mkdir -p /var/www/pydio \
      && curl -SL https://download.pydio.com/pub/core/archives/pydio-core-$PYDIO_VERSION.tar.gz | tar -C /var/www/pydio --strip-components=1 -zx \
      && rm -rf /var/www/pydio/data \
+     && ln -s /data/pydio /var/www/pydio/data \
      && find /var/www/pydio -name .htaccess -delete \
      && curl -o /usr/local/bin/pydio -SL https://download.pydio.com/pub/booster/release/$PYDIO_BOOSTER_VER/linux_amd64/pydio \
  	&& chmod +x /usr/local/bin/pydio
