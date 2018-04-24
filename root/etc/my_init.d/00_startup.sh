@@ -43,7 +43,6 @@ php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD
 [ -d /data/booster ] || mkdir -p /data/booster
 [ -f /data/booster/pydiocaddy.conf ] || cp /etc/pydiocaddy.conf /data/booster/pydiocaddy.conf
 [ -f /data/booster/pydioconf.conf ] || cp /etc/pydioconf.conf /data/booster/pydioconf.conf
-rm -Rf /var/www/pydio/data
 
 array=(/var/www/pydio/data/cache/admin_counted /var/www/pydio/data/cache/diag_result.php /var/www/pydio/data/cache/first_run_passed)
 
