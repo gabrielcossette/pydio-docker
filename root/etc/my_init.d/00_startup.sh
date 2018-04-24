@@ -62,6 +62,43 @@ sed -i -e "s/MYSQL_PASSWORD/$PYDIO_DB_PASSWORD/g" /var/www/pydio/data/plugins/bo
 sed -i -e "s/MYSQL_DATABASE/$PYDIO_DB_NAME/g" /var/www/pydio/data/plugins/boot.conf/bootstrap.json
 
 echo "table $TABLENAME does not exist, try to create table..."
+
+TERM=dumb php -- <<'EOPHP'
+<?php
+// database might not exist, so let's try creating it (just to be safe)
+
+$stderr = fopen('php://stderr', 'w');
+
+// https://codex.wordpress.org/Editing_wp-config.php#MySQL_Alternate_Port
+//   "hostname:port"
+// https://codex.wordpress.org/Editing_wp-config.php#MySQL_Sockets_or_Pipes
+//   "hostname:unix-socket-path"
+list($host, $socket) = explode(':', getenv('PYDIO_DB_HOST'), 2);
+$port = 0;
+if (is_numeric($socket)) {
+	$port = (int) $socket;
+	$socket = null;
+}
+$user = getenv('PYDIO_DB_USER');
+$pass = getenv('PYDIO_DB_PASSWORD');
+
+$maxTries = 10;
+do {
+	$mysql = new mysqli($host, $user, $pass, '', $port, $socket);
+	if ($mysql->connect_error) {
+		fwrite($stderr, "\n" . 'MySQL Connection Error: (' . $mysql->connect_errno . ') ' . $mysql->connect_error . "\n");
+		--$maxTries;
+		if ($maxTries <= 0) {
+			exit(1);
+		}
+		sleep(3);
+	}
+} while ($mysql->connect_error);
+
+$mysql->close();
+EOPHP
+
+
 mysql -u $PYDIO_DB_USER -p"$PYDIO_DB_PASSWORD" -h $PYDIO_DB_HOST < /var/www/data/pydio.sql
 
 mkdir /wp/recycle_bin
