@@ -24,7 +24,16 @@ file_env() {
 }
 
 file_env 'PYDIO_DB_PASSWORD'
-file_env 'PYDIO_PASSWORD'
+file_env '$PYDIO_USER1'
+file_env '$PYDIO_USER2'
+file_env '$PYDIO_USER3'
+file_env '$PYDIO_PASSWORD1'
+file_env '$PYDIO_PASSWORD2'
+file_env '$PYDIO_PASSWORD3'
+file_env '$PYDIO_SECRET1'
+file_env '$PYDIO_SECRET2'
+file_env '$PYDIO_SECRET3'
+
 # permissions
 PUID=${PUID:-911}
 PGID=${PGID:-911}
@@ -66,9 +75,9 @@ EOPHP
 
 if [ ! -f /var/www/pydio/data/cache/first_run_passed ]; then
 
-php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD1 1 $PYDIO_USER1
-php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD1 2 $PYDIO_USER2
-php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD1 3 $PYDIO_USER3
+php /var/www/data/generate_pydio_hash.php 1 $PYDIO_USER1 $PYDIO_PASSWORD1 $PYDIO_SECRET1 
+php /var/www/data/generate_pydio_hash.php 2 $PYDIO_USER2 $PYDIO_PASSWORD2 $PYDIO_SECRET2
+php /var/www/data/generate_pydio_hash.php 3 $PYDIO_USER3 $PYDIO_PASSWORD3 $PYDIO_SECRET3
 
 [ -d /tmp/sess ] || mkdir /tmp/sess/
 [ -d /data/pydio/cache ] || mkdir -p /data/pydio/cache
@@ -109,7 +118,10 @@ mkdir /wp5/recycle_bin
 
 else
 
-php /var/www/data/update_pydio_hash.php $PYDIO_PASSWORD
+
+php /var/www/data/update_pydio_hash.php 1 $PYDIO_USER1 $PYDIO_PASSWORD1 $PYDIO_SECRET1 
+php /var/www/data/update_pydio_hash.php 2 $PYDIO_USER2 $PYDIO_PASSWORD2 $PYDIO_SECRET2
+php /var/www/data/update_pydio_hash.php 3 $PYDIO_USER3 $PYDIO_PASSWORD3 $PYDIO_SECRET3
 
 echo "Updating DB password"
 mysql -u $PYDIO_DB_USER -p"$PYDIO_DB_PASSWORD" -h $PYDIO_DB_HOST < /var/www/data/user.sql

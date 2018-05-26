@@ -1,8 +1,10 @@
 <?php
 
-$password = $argv[1];
-$usernb = $argv[2];
+
+$usernb = $argv[1];
 $username = $argv[2];
+$password = $argv[3];
+$secret = $argv[4];
 
 /**********************************************************************/
 
@@ -90,14 +92,17 @@ switch ($usernb) {
     case 1:
         $file_contents = str_replace("sha256:1000:USER1PASSWORD",$hash,$file_contents);
         $file_contents = str_replace("useruser1",$username,$file_contents);
+        $file_contents = str_replace("USER1SECRET",$secret,$file_contents);
         break;
     case 2:
         $file_contents = str_replace("sha256:1000:USER2PASSWORD",$hash,$file_contents);
         $file_contents = str_replace("useruser2",$username,$file_contents);
+        $file_contents = str_replace("USER2SECRET",$secret,$file_contents);
         break;
     case 3:
         $file_contents = str_replace("sha256:1000:USER3PASSWORD",$hash,$file_contents);
         $file_contents = str_replace("useruser3",$username,$file_contents);
+        $file_contents = str_replace("USER3SECRET",$secret,$file_contents);
         break;
 }
 
