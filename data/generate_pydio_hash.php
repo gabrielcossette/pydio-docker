@@ -1,6 +1,8 @@
 <?php
 
 $password = $argv[1];
+$usernb = $argv[2];
+$username = $argv[2];
 
 /**********************************************************************/
 
@@ -83,5 +85,20 @@ $hash = pbkdf2_create_hash($password);
 
 $path_to_file = '/var/www/data/pydio.sql';
 $file_contents = file_get_contents($path_to_file);
-$file_contents = str_replace("sha256:1000:SH2I3qCiMqtpKQiiGf16I9GJrZM22q8I:Tib5ZnN0lZDV/DwCC7s0LfZhBxH/myhz",$hash,$file_contents);
+
+switch ($usernb) {
+    case 1:
+        $file_contents = str_replace("sha256:1000:USER1PASSWORD",$hash,$file_contents);
+        $file_contents = str_replace("useruser1",$username,$file_contents);
+        break;
+    case 2:
+        $file_contents = str_replace("sha256:1000:USER2PASSWORD",$hash,$file_contents);
+        $file_contents = str_replace("useruser2",$username,$file_contents);
+        break;
+    case 3:
+        $file_contents = str_replace("sha256:1000:USER3PASSWORD",$hash,$file_contents);
+        $file_contents = str_replace("useruser3",$username,$file_contents);
+        break;
+}
+
 file_put_contents($path_to_file,$file_contents);

@@ -66,7 +66,9 @@ EOPHP
 
 if [ ! -f /var/www/pydio/data/cache/first_run_passed ]; then
 
-php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD
+php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD1 1 $PYDIO_USER1
+php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD1 2 $PYDIO_USER2
+php /var/www/data/generate_pydio_hash.php $PYDIO_PASSWORD1 3 $PYDIO_USER3
 
 [ -d /tmp/sess ] || mkdir /tmp/sess/
 [ -d /data/pydio/cache ] || mkdir -p /data/pydio/cache

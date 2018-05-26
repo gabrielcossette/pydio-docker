@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 11, 2018 at 02:27 AM
--- Server version: 10.2.12-MariaDB-10.2.12+maria~jessie
--- PHP Version: 7.1.9
+-- Generation Time: May 26, 2018 at 03:34 AM
+-- Server version: 10.2.14-MariaDB-10.2.14+maria~jessie
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -131,13 +131,42 @@ CREATE TABLE `ajxp_log` (
 
 INSERT INTO `ajxp_log` (`id`, `logdate`, `remote_ip`, `severity`, `user`, `source`, `message`, `params`, `repository_id`, `device`, `dirname`, `basename`) VALUES
 (22, '2018-02-11 02:24:54', '10.42.161.116', 'ERROR', 'shared', 'SecureTokenMiddleware.php', 'error l.70', 'message=You are not allowed to access this resource.', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
-(23, '2018-02-11 02:24:58', '10.42.161.116', 'INFO', 'admin', 'Pydio\\Core\\Services\\AuthService', 'Log In', 'context=WebUI', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
-(24, '2018-02-11 02:25:08', '10.42.161.116', 'INFO', 'admin', 'conf.sql', 'Switch Repository', 'rep. id=ajxp_conf', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
-(25, '2018-02-11 02:25:54', '10.42.161.116', 'INFO', 'admin', 'Pydio\\Core\\Services\\RepositoryService', 'Create Repository', 'repo_name=WordPress 2', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
-(26, '2018-02-11 02:26:35', '10.42.161.116', 'INFO', 'admin', 'Pydio\\Core\\Services\\RepositoryService', 'Edit Repository', 'repo_name=WordPress', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
-(27, '2018-02-11 02:26:43', '10.42.161.116', 'INFO', 'admin', 'Pydio\\Core\\Services\\RepositoryService', 'Edit Repository', 'repo_name=WordPress 2', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
-(28, '2018-02-11 02:27:31', '10.42.161.116', 'INFO', 'admin', 'Pydio\\Core\\Services\\RepositoryService', 'Delete Repository', 'repo_id=7bb333463dd9df31f4eba6103c78fddf', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
-(29, '2018-02-11 02:27:38', '10.42.161.116', 'INFO', 'admin', 'Pydio\\Core\\Services\\AuthService', 'Log Out', '', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', '');
+(23, '2018-02-11 02:24:58', '10.42.161.116', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log In', 'context=WebUI', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
+(24, '2018-02-11 02:25:08', '10.42.161.116', 'INFO', 'useruser1', 'conf.sql', 'Switch Repository', 'rep. id=ajxp_conf', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
+(25, '2018-02-11 02:25:54', '10.42.161.116', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\RepositoryService', 'Create Repository', 'repo_name=WordPress 2', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
+(26, '2018-02-11 02:26:35', '10.42.161.116', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\RepositoryService', 'Edit Repository', 'repo_name=WordPress', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
+(27, '2018-02-11 02:26:43', '10.42.161.116', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\RepositoryService', 'Edit Repository', 'repo_name=WordPress 2', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
+(28, '2018-02-11 02:27:31', '10.42.161.116', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\RepositoryService', 'Delete Repository', 'repo_id=7bb333463dd9df31f4eba6103c78fddf', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
+(29, '2018-02-11 02:27:38', '10.42.161.116', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log Out', '', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.97 Safari/537.36 Vivaldi/1.94.1008.40', '', ''),
+(30, '2018-05-22 21:42:43', '10.42.50.8', 'ERROR', 'shared', 'SecureTokenMiddleware.php', 'error l.70', 'message=You are not allowed to access this resource.', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(31, '2018-05-22 21:42:51', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log In', 'context=WebUI', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(32, '2018-05-22 21:43:00', '10.42.50.8', 'INFO', 'useruser1', 'conf.sql', 'Switch Repository', 'rep. id=ajxp_conf', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(33, '2018-05-22 21:48:41', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log Out', '', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(34, '2018-05-22 21:48:56', '10.42.50.8', 'WARNING', 'shared', 'Pydio\\Core\\Services\\AuthService', 'Login failed', 'user=useruser1;error=Invalid password', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(35, '2018-05-22 21:49:01', '10.42.50.8', 'WARNING', 'shared', 'Pydio\\Core\\Services\\AuthService', 'Login failed', 'user=useruser1;error=Invalid password', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(36, '2018-05-22 21:49:18', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log In', 'context=WebUI', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(37, '2018-05-22 21:49:23', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log Out', '', 'ajxp_home', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(38, '2018-05-22 21:49:38', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log In', 'context=WebUI', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(39, '2018-05-22 21:49:49', '10.42.50.8', 'INFO', 'useruser1', 'conf.sql', 'Switch Repository', 'rep. id=ajxp_conf', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(40, '2018-05-22 21:51:14', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log Out', '', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(41, '2018-05-22 21:51:25', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log In', 'context=WebUI', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(42, '2018-05-22 21:52:08', '10.42.50.8', 'INFO', 'useruser1', 'conf.sql', 'Switch Repository', 'rep. id=ajxp_conf', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(43, '2018-05-22 21:52:36', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log Out', '', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(44, '2018-05-22 21:52:47', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log In', 'context=WebUI', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(45, '2018-05-22 21:53:07', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log Out', '', 'ajxp_home', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(46, '2018-05-22 21:53:43', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log In', 'context=WebUI', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(47, '2018-05-22 21:53:50', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log Out', '', 'ajxp_home', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(48, '2018-05-24 01:53:29', '10.42.50.8', 'ERROR', 'shared', 'SecureTokenMiddleware.php', 'error l.70', 'message=You are not allowed to access this resource.', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.97.1183.3', '', ''),
+(49, '2018-05-24 01:53:43', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log In', 'context=WebUI', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.97.1183.3', '', ''),
+(50, '2018-05-24 01:53:48', '10.42.50.8', 'INFO', 'useruser1', 'conf.sql', 'Switch Repository', 'rep. id=ajxp_conf', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.97.1183.3', '', ''),
+(51, '2018-05-24 01:55:35', '10.42.50.8', 'INFO', 'useruser1', 'conf.sql', 'Switch Repository', 'rep. id=ajxp_home', 'ajxp_home', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.97.1183.3', '', ''),
+(52, '2018-05-24 02:25:46', '10.42.50.8', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log Out', '', 'ajxp_home', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.97.1183.3', '', ''),
+(53, '2018-05-25 01:17:17', '10.42.185.7', 'ERROR', 'shared', 'SecureTokenMiddleware.php', 'error l.70', 'message=You are not allowed to access this resource.', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(54, '2018-05-25 01:17:48', '10.42.185.7', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log In', 'context=WebUI', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(55, '2018-05-25 01:18:00', '10.42.185.7', 'INFO', 'useruser1', 'conf.sql', 'Switch Repository', 'rep. id=ajxp_conf', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(56, '2018-05-25 01:18:24', '10.42.185.7', 'INFO', 'useruser2', 'Pydio\\Core\\Services\\UsersService', 'Create User', 'user_id=useruser2', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(57, '2018-05-25 01:20:51', '10.42.185.7', 'INFO', 'useruser3', 'Pydio\\Core\\Services\\UsersService', 'Create User', 'user_id=useruser3', 'no-repository', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', ''),
+(58, '2018-05-25 01:22:18', '10.42.185.7', 'INFO', 'useruser1', 'Pydio\\Core\\Services\\AuthService', 'Log Out', '', 'ajxp_conf', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.183 Safari/537.36 Vivaldi/1.96.1146.5', '', '');
 
 -- --------------------------------------------------------
 
@@ -193,7 +222,7 @@ CREATE TABLE `ajxp_mq_queues` (
 --
 
 INSERT INTO `ajxp_mq_queues` (`channel_name`, `content`) VALUES
-('nodes:*', 0x1d8e410a83301405eff22f5063aaa63faba04143ad8a51e94e8456eba256eac622b97b49768f6118de803e1e1b460871ae64d168e003128ba88f70497418a57a5ab3621ed5543e7ff7eb3e7ec42b5ed62fdb8995a995030491ab4e029f91048451127ae780bb70ab65ddab04b8d386c77b5eec261e425a976dd557a2c91c4138013766438670935a8b54ba3f1e1ec6fc01);
+('nodes:*', 0xc592c14e834010865fa59907b00bdba57450136c5724a92d2db457b2c2a6596d81b0db831ade5d96d4a447bde86de6cf3f337fbe8c40173f354e11e6cb98afb21402818e95a88b20d34dc3a3fde343582e1787f42c12c54f8d977d249ea916ab376ba6d6cc10c265bce7102874983b751d87522f1816ef52becde30504834d942755d9da2108d176bd4bf224cc9e0605610c41d769f4119e799a86111ff2f4111592606d756dcaf951680d38b9042feacac8cad80d130fe1b695c75a94b9aab469cf85517535aa5f5e6561eea0954dad95a9dbf7fca8b481f1bd9dea87ce5ab67179698688ae6d660827a9b538c8edfc97607eeaebaeaf58fc1add1e04b9a1fecc678c90d1374f87f5ee1eefdf72a0ffcd8111e64fbd2b0e94d827e9be00);
 
 -- --------------------------------------------------------
 
@@ -211,6 +240,7 @@ CREATE TABLE `ajxp_plugin_configs` (
 --
 
 INSERT INTO `ajxp_plugin_configs` (`id`, `configs`) VALUES
+('authfront.otp', 0x613a313a7b733a31393a22414a58505f504c5547494e5f454e41424c4544223b623a313b7d),
 ('core.ajaxplorer', 0x613a323a7b733a31373a224150504c49434154494f4e5f5449544c45223b733a353a22507964696f223b733a31363a2244454641554c545f4c414e4755414745223b733a323a22656e223b7d),
 ('core.log', 0x613a313a7b733a32323a22554e495155455f504c5547494e5f494e5354414e4345223b613a333a7b733a31333a22696e7374616e63655f6e616d65223b733a373a226c6f672e73716c223b733a31383a2267726f75705f7377697463685f76616c7565223b733a373a226c6f672e73716c223b733a31303a2253514c5f445249564552223b613a323a7b733a31313a22636f72655f647269766572223b733a343a22636f7265223b733a31383a2267726f75705f7377697463685f76616c7565223b733a343a22636f7265223b7d7d7d),
 ('core.mq', 0x613a313a7b733a31383a22554e495155455f4d535f494e5354414e4345223b613a333a7b733a31333a22696e7374616e63655f6e616d65223b733a363a226d712e73716c223b733a31383a2267726f75705f7377697463685f76616c7565223b733a363a226d712e73716c223b733a31303a2253514c5f445249564552223b613a323a7b733a31313a22636f72655f647269766572223b733a343a22636f7265223b733a31383a2267726f75705f7377697463685f76616c7565223b733a343a22636f7265223b7d7d7d),
@@ -300,7 +330,9 @@ CREATE TABLE `ajxp_roles` (
 
 INSERT INTO `ajxp_roles` (`role_id`, `serial_role`, `last_updated`, `owner_user_id`) VALUES
 ('AJXP_GRP_/', 'O:9:\"AJXP_Role\":8:{s:12:\"\0*\0groupPath\";N;s:9:\"\0*\0roleId\";s:10:\"AJXP_GRP_/\";s:7:\"\0*\0acls\";a:4:{i:1;s:2:\"rw\";s:9:\"ajxp_user\";s:2:\"rw\";s:9:\"ajxp_home\";s:2:\"rw\";s:5:\"inbox\";s:2:\"rw\";}s:13:\"\0*\0parameters\";a:1:{s:19:\"AJXP_REPO_SCOPE_ALL\";a:4:{s:9:\"core.conf\";a:3:{s:17:\"ROLE_DISPLAY_NAME\";s:10:\"Root Group\";s:19:\"ROLE_FORCE_OVERRIDE\";s:5:\"false\";s:24:\"DEFAULT_START_REPOSITORY\";s:9:\"ajxp_home\";}s:17:\"action.disclaimer\";a:1:{s:19:\"DISCLAIMER_ACCEPTED\";s:2:\"no\";}s:13:\"meta.syncable\";a:1:{s:13:\"REPO_SYNCABLE\";s:4:\"true\";}s:11:\"core.mailer\";a:4:{s:23:\"NOTIFICATIONS_EMAIL_GET\";s:4:\"true\";s:29:\"NOTIFICATIONS_EMAIL_FREQUENCY\";s:1:\"M\";s:34:\"NOTIFICATIONS_EMAIL_FREQUENCY_USER\";s:1:\"5\";s:29:\"NOTIFICATIONS_EMAIL_SEND_HTML\";s:4:\"true\";}}}s:10:\"\0*\0actions\";a:0:{}s:14:\"\0*\0autoApplies\";a:0:{}s:8:\"\0*\0masks\";a:0:{}s:14:\"\0*\0lastUpdated\";i:0;}', 1477044205, NULL),
-('AJXP_USR_/admin', 'O:25:\"Pydio\\Conf\\Core\\AJXP_Role\":9:{s:12:\"\0*\0groupPath\";N;s:9:\"\0*\0roleId\";s:15:\"AJXP_USR_/admin\";s:7:\"\0*\0acls\";a:8:{i:0;s:2:\"rw\";i:1;s:2:\"rw\";s:9:\"ajxp_user\";s:2:\"rw\";s:9:\"ajxp_home\";s:2:\"rw\";s:5:\"inbox\";s:2:\"rw\";s:9:\"ajxp_conf\";s:2:\"rw\";s:11:\"fs_template\";s:2:\"rw\";s:32:\"0210216687493a15c6a9ca323a519049\";s:2:\"rw\";}s:13:\"\0*\0parameters\";a:1:{s:19:\"AJXP_REPO_SCOPE_ALL\";a:1:{s:9:\"core.conf\";a:1:{s:17:\"USER_DISPLAY_NAME\";s:5:\"admin\";}}}s:10:\"\0*\0actions\";a:0:{}s:14:\"\0*\0autoApplies\";a:0:{}s:8:\"\0*\0masks\";a:0:{}s:14:\"\0*\0lastUpdated\";i:1517367568;s:10:\"\0*\0ownerId\";N;}', 1518316051, NULL),
+('AJXP_USR_/useruser1', 'O:25:\"Pydio\\Conf\\Core\\AJXP_Role\":9:{s:12:\"\0*\0groupPath\";N;s:9:\"\0*\0roleId\";s:15:\"AJXP_USR_/useruser1\";s:7:\"\0*\0acls\";a:8:{i:0;s:2:\"rw\";i:1;s:2:\"rw\";s:9:\"ajxp_user\";s:2:\"rw\";s:9:\"ajxp_home\";s:2:\"rw\";s:5:\"inbox\";s:2:\"rw\";s:9:\"ajxp_conf\";s:2:\"rw\";s:11:\"fs_template\";s:2:\"rw\";s:32:\"0210216687493a15c6a9ca323a519049\";s:2:\"rw\";}s:13:\"\0*\0parameters\";a:1:{s:19:\"AJXP_REPO_SCOPE_ALL\";a:2:{s:9:\"core.conf\";a:2:{s:17:\"USER_DISPLAY_NAME\";s:5:\"useruser1\";s:16:\"USER_LOCK_ACTION\";s:16:\"AJXP_VALUE_CLEAR\";}s:13:\"authfront.otp\";a:4:{s:14:\"google_enabled\";b:1;s:6:\"google\";s:16:\"HIRELCFDVPSCCDAD\";s:20:\"google_enabled_admin\";b:1;s:11:\"google_last\";i:50907035;}}}s:10:\"\0*\0actions\";a:0:{}s:14:\"\0*\0autoApplies\";a:0:{}s:8:\"\0*\0masks\";a:0:{}s:14:\"\0*\0lastUpdated\";i:1527126823;s:10:\"\0*\0ownerId\";N;}', 1527211068, NULL),
+('AJXP_USR_/useruser2', 'O:25:\"Pydio\\Conf\\Core\\AJXP_Role\":9:{s:12:\"\0*\0groupPath\";N;s:9:\"\0*\0roleId\";s:16:\"AJXP_USR_/useruser2\";s:7:\"\0*\0acls\";a:3:{i:0;s:2:\"rw\";s:32:\"0210216687493a15c6a9ca323a519049\";s:2:\"rw\";s:9:\"ajxp_conf\";s:2:\"rw\";}s:13:\"\0*\0parameters\";a:1:{s:19:\"AJXP_REPO_SCOPE_ALL\";a:1:{s:13:\"authfront.otp\";a:2:{s:14:\"google_enabled\";b:1;s:6:\"google\";s:14:\"fsdfsdfssffsdf\";}}}s:10:\"\0*\0actions\";a:0:{}s:14:\"\0*\0autoApplies\";a:0:{}s:8:\"\0*\0masks\";a:0:{}s:14:\"\0*\0lastUpdated\";i:1527211230;s:10:\"\0*\0ownerId\";N;}', 1527211315, NULL),
+('AJXP_USR_/useruser3', 'O:25:\"Pydio\\Conf\\Core\\AJXP_Role\":9:{s:12:\"\0*\0groupPath\";N;s:9:\"\0*\0roleId\";s:16:\"AJXP_USR_/useruser3\";s:7:\"\0*\0acls\";a:3:{i:0;s:2:\"rw\";s:32:\"0210216687493a15c6a9ca323a519049\";s:2:\"rw\";s:9:\"ajxp_conf\";s:2:\"rw\";}s:13:\"\0*\0parameters\";a:1:{s:19:\"AJXP_REPO_SCOPE_ALL\";a:1:{s:13:\"authfront.otp\";a:2:{s:14:\"google_enabled\";b:1;s:6:\"google\";s:16:\"fsfssfsfsgbfdsdf\";}}}s:10:\"\0*\0actions\";a:0:{}s:14:\"\0*\0autoApplies\";a:0:{}s:8:\"\0*\0masks\";a:0:{}s:14:\"\0*\0lastUpdated\";i:1527211297;s:10:\"\0*\0ownerId\";N;}', 1527211330, NULL),
 ('GUEST', 'O:9:\"AJXP_Role\":8:{s:12:\"\0*\0groupPath\";N;s:9:\"\0*\0roleId\";s:5:\"GUEST\";s:7:\"\0*\0acls\";a:0:{}s:13:\"\0*\0parameters\";a:1:{s:19:\"AJXP_REPO_SCOPE_ALL\";a:1:{s:9:\"core.conf\";a:1:{s:17:\"ROLE_DISPLAY_NAME\";s:15:\"Guest user role\";}}}s:10:\"\0*\0actions\";a:1:{s:19:\"AJXP_REPO_SCOPE_ALL\";a:3:{s:9:\"access.fs\";a:1:{s:5:\"purge\";s:8:\"disabled\";}s:10:\"meta.watch\";a:1:{s:12:\"toggle_watch\";s:8:\"disabled\";}s:12:\"index.lucene\";a:1:{s:5:\"index\";s:8:\"disabled\";}}}s:14:\"\0*\0autoApplies\";a:1:{i:0;s:5:\"guest\";}s:8:\"\0*\0masks\";a:0:{}s:14:\"\0*\0lastUpdated\";i:0;}', 1477044205, NULL),
 ('MINISITE', 'O:9:\"AJXP_Role\":8:{s:12:\"\0*\0groupPath\";N;s:9:\"\0*\0roleId\";s:8:\"MINISITE\";s:7:\"\0*\0acls\";a:0:{}s:13:\"\0*\0parameters\";a:1:{s:19:\"AJXP_REPO_SCOPE_ALL\";a:1:{s:9:\"core.conf\";a:1:{s:17:\"ROLE_DISPLAY_NAME\";s:14:\"Minisite Users\";}}}s:10:\"\0*\0actions\";a:1:{s:22:\"AJXP_REPO_SCOPE_SHARED\";a:9:{s:9:\"access.fs\";a:3:{s:9:\"ajxp_link\";b:0;s:5:\"chmod\";b:0;s:5:\"purge\";b:0;}s:10:\"meta.watch\";a:1:{s:12:\"toggle_watch\";b:0;}s:11:\"conf.serial\";a:1:{s:13:\"get_bookmarks\";b:0;}s:8:\"conf.sql\";a:1:{s:13:\"get_bookmarks\";b:0;}s:12:\"index.lucene\";a:1:{s:5:\"index\";b:0;}s:12:\"action.share\";a:6:{s:5:\"share\";b:0;s:17:\"share-edit-shared\";b:0;s:22:\"share-folder-workspace\";b:0;s:19:\"share-file-minisite\";b:0;s:24:\"share-selection-minisite\";b:0;s:28:\"share-folder-minisite-public\";b:0;}s:8:\"gui.ajax\";a:1:{s:8:\"bookmark\";b:0;}s:11:\"auth.serial\";a:1:{s:11:\"pass_change\";b:0;}s:8:\"auth.sql\";a:1:{s:11:\"pass_change\";b:0;}}}s:14:\"\0*\0autoApplies\";a:0:{}s:8:\"\0*\0masks\";a:0:{}s:14:\"\0*\0lastUpdated\";i:0;}', 1477044205, NULL),
 ('MINISITE_NODOWNLOAD', 'O:9:\"AJXP_Role\":8:{s:12:\"\0*\0groupPath\";N;s:9:\"\0*\0roleId\";s:19:\"MINISITE_NODOWNLOAD\";s:7:\"\0*\0acls\";a:0:{}s:13:\"\0*\0parameters\";a:1:{s:19:\"AJXP_REPO_SCOPE_ALL\";a:1:{s:9:\"core.conf\";a:1:{s:17:\"ROLE_DISPLAY_NAME\";s:28:\"Minisite Users - No Download\";}}}s:10:\"\0*\0actions\";a:1:{s:22:\"AJXP_REPO_SCOPE_SHARED\";a:1:{s:9:\"access.fs\";a:4:{s:8:\"download\";b:0;s:14:\"download_chunk\";b:0;s:16:\"prepare_chunk_dl\";b:0;s:12:\"download_all\";b:0;}}}s:14:\"\0*\0autoApplies\";a:0:{}s:8:\"\0*\0masks\";a:0:{}s:14:\"\0*\0lastUpdated\";i:0;}', 1477044205, NULL);
@@ -375,7 +407,9 @@ CREATE TABLE `ajxp_users` (
 --
 
 INSERT INTO `ajxp_users` (`login`, `password`, `groupPath`) VALUES
-('admin', 'sha256:1000:SH2I3qCiMqtpKQiiGf16I9GJrZM22q8I:Tib5ZnN0lZDV/DwCC7s0LfZhBxH/myhz', '/');
+('useruser1', 'sha256:1000:USER1PASSWORD', '/'),
+('useruser2', 'sha256:1000:USER2PASSWORD', '/'),
+('useruser3', 'sha256:1000:USER3PASSWORD', '/');
 
 -- --------------------------------------------------------
 
@@ -409,11 +443,13 @@ CREATE TABLE `ajxp_user_prefs` (
 --
 
 INSERT INTO `ajxp_user_prefs` (`rid`, `login`, `name`, `val`) VALUES
-(1, 'admin', 'AJXP_WEBDAV_DATA', 0x2470687073657269616c24613a313a7b733a333a22484131223b733a33323a223133373263333363343132383865333632333135643234313538646135653133223b7d),
-(2, 'admin', 'history', 0x2470687073657269616c24613a313a7b733a31353a226c6173745f7265706f7369746f7279223b733a393a22616a78705f636f6e66223b7d),
-(3, 'admin', 'gui_preferences', 0x7b2257656c636f6d6550616e656c2e44617368626f6172644c61796f7574223a7b226c67223a5b7b2278223a302c2279223a31302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22717569636b5f75706c6f6164227d2c7b2278223a302c2279223a32302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22646f776e6c6f616473227d2c7b2278223a302c2279223a33302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a2271725f636f6465227d2c7b2278223a302c2279223a35302c2277223a322c2268223a31322c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22766964656f73227d5d2c226d64223a5b7b2278223a302c2279223a31302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22717569636b5f75706c6f6164227d2c7b2278223a302c2279223a32302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22646f776e6c6f616473227d2c7b2278223a302c2279223a33302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a2271725f636f6465227d2c7b2278223a302c2279223a35302c2277223a322c2268223a31322c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22766964656f73227d5d2c22736d223a5b7b2278223a302c2279223a31302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22717569636b5f75706c6f6164227d2c7b2278223a302c2279223a32302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22646f776e6c6f616473227d2c7b2278223a302c2279223a33302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a2271725f636f6465227d2c7b2278223a302c2279223a35302c2277223a322c2268223a31322c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22766964656f73227d5d2c227873223a5b7b2278223a302c2279223a31302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22717569636b5f75706c6f6164227d2c7b2278223a302c2279223a32302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22646f776e6c6f616473227d2c7b2278223a302c2279223a33302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a2271725f636f6465227d2c7b2278223a302c2279223a35302c2277223a322c2268223a31322c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22766964656f73227d5d2c22787873223a5b7b2277223a322c2268223a31302c2278223a302c2279223a31302c2269223a22717569636b5f75706c6f6164222c226d6f766564223a66616c73652c22737461746963223a66616c73652c226973526573697a61626c65223a66616c73657d2c7b2277223a322c2268223a31302c2278223a302c2279223a32302c2269223a22646f776e6c6f616473222c226d6f766564223a66616c73652c22737461746963223a66616c73652c226973526573697a61626c65223a66616c73657d2c7b2277223a322c2268223a31302c2278223a302c2279223a33302c2269223a2271725f636f6465222c226d6f766564223a66616c73652c22737461746963223a66616c73652c226973526573697a61626c65223a66616c73657d2c7b2277223a322c2268223a31322c2278223a302c2279223a35302c2269223a22766964656f73222c226d6f766564223a66616c73652c22737461746963223a66616c73652c226973526573697a61626c65223a66616c73657d5d7d2c22557365724163636f756e742e57656c636f6d654d6f64616c2e53686f776e223a747275652c2257656c636f6d65436f6d706f6e656e742e507964696f382e546f757247756964652e57656c636f6d65223a747275652c2257656c636f6d65436f6d706f6e656e742e507964696f382e546f757247756964652e465354656d706c617465223a747275657d),
-(9, 'admin', 'repository_last_connected', 0x2470687073657269616c24613a343a7b733a393a22616a78705f636f6e66223b693a313531383331353930383b733a393a22616a78705f686f6d65223b693a313531373336373537313b733a33323a223032313032313636383734393361313563366139636133323361353139303439223b693a313531373336373539323b693a303b693a313531373336373539303b7d),
-(17, 'admin', 'RECENT_LIST', 0x7b2231353137333637353933223a22707964696f3a5c2f5c2f61646d696e403032313032313636383734393361313563366139636133323361353139303439222c2231353137333637353931223a22707964696f3a5c2f5c2f61646d696e4030227d);
+(1, 'useruser1', 'AJXP_WEBDAV_DATA', 0x2470687073657269616c24613a313a7b733a333a22484131223b733a33323a223133373263333363343132383865333632333135643234313538646135653133223b7d),
+(2, 'useruser1', 'history', 0x2470687073657269616c24613a313a7b733a31353a226c6173745f7265706f7369746f7279223b733a393a22616a78705f636f6e66223b7d),
+(3, 'useruser1', 'gui_preferences', 0x7b2257656c636f6d6550616e656c2e44617368626f6172644c61796f7574223a7b226c67223a5b7b2278223a302c2279223a31302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22717569636b5f75706c6f6164227d2c7b2278223a302c2279223a32302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22646f776e6c6f616473227d2c7b2278223a302c2279223a33302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a2271725f636f6465227d2c7b2278223a302c2279223a35302c2277223a322c2268223a31322c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22766964656f73227d5d2c226d64223a5b7b2278223a302c2279223a31302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22717569636b5f75706c6f6164227d2c7b2278223a302c2279223a32302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22646f776e6c6f616473227d2c7b2278223a302c2279223a33302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a2271725f636f6465227d2c7b2278223a302c2279223a35302c2277223a322c2268223a31322c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22766964656f73227d5d2c22736d223a5b7b2278223a302c2279223a31302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22717569636b5f75706c6f6164227d2c7b2278223a302c2279223a32302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22646f776e6c6f616473227d2c7b2278223a302c2279223a33302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a2271725f636f6465227d2c7b2278223a302c2279223a35302c2277223a322c2268223a31322c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22766964656f73227d5d2c227873223a5b7b2278223a302c2279223a31302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22717569636b5f75706c6f6164227d2c7b2278223a302c2279223a32302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22646f776e6c6f616473227d2c7b2278223a302c2279223a33302c2277223a322c2268223a31302c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a2271725f636f6465227d2c7b2278223a302c2279223a35302c2277223a322c2268223a31322c226973526573697a61626c65223a66616c73652c2268616e646c65223a226834222c2269223a22766964656f73227d5d2c22787873223a5b7b2277223a322c2268223a31302c2278223a302c2279223a31302c2269223a22717569636b5f75706c6f6164222c226d6f766564223a66616c73652c22737461746963223a66616c73652c226973526573697a61626c65223a66616c73657d2c7b2277223a322c2268223a31302c2278223a302c2279223a32302c2269223a22646f776e6c6f616473222c226d6f766564223a66616c73652c22737461746963223a66616c73652c226973526573697a61626c65223a66616c73657d2c7b2277223a322c2268223a31302c2278223a302c2279223a33302c2269223a2271725f636f6465222c226d6f766564223a66616c73652c22737461746963223a66616c73652c226973526573697a61626c65223a66616c73657d2c7b2277223a322c2268223a31322c2278223a302c2279223a35302c2269223a22766964656f73222c226d6f766564223a66616c73652c22737461746963223a66616c73652c226973526573697a61626c65223a66616c73657d5d7d2c22557365724163636f756e742e57656c636f6d654d6f64616c2e53686f776e223a747275652c2257656c636f6d65436f6d706f6e656e742e507964696f382e546f757247756964652e57656c636f6d65223a747275652c2257656c636f6d65436f6d706f6e656e742e507964696f382e546f757247756964652e465354656d706c617465223a747275657d),
+(9, 'useruser1', 'repository_last_connected', 0x2470687073657269616c24613a343a7b733a393a22616a78705f636f6e66223b693a313532373231313038303b733a393a22616a78705f686f6d65223b693a313532373132363933353b733a33323a223032313032313636383734393361313563366139636133323361353139303439223b693a313531373336373539323b693a303b693a313531373336373539303b7d),
+(17, 'useruser1', 'RECENT_LIST', 0x7b2231353137333637353933223a22707964696f3a5c2f5c2f61646d696e403032313032313636383734393361313563366139636133323361353139303439222c2231353137333637353931223a22707964696f3a5c2f5c2f61646d696e4030227d),
+(70, 'useruser2', 'AJXP_WEBDAV_DATA', 0x2470687073657269616c24613a313a7b733a333a22484131223b733a33323a226166303537346434373663353861366263393464343134643636333933633564223b7d),
+(71, 'useruser3', 'AJXP_WEBDAV_DATA', 0x2470687073657269616c24613a313a7b733a333a22484131223b733a33323a223261393539356634396331326534396335333938316465636333613865306662223b7d);
 
 -- --------------------------------------------------------
 
@@ -433,9 +469,18 @@ CREATE TABLE `ajxp_user_rights` (
 --
 
 INSERT INTO `ajxp_user_rights` (`rid`, `login`, `repo_uuid`, `rights`) VALUES
-(6, 'admin', 'ajxp.admin', '1'),
-(7, 'admin', 'ajxp.roles', '$phpserial$a:1:{s:15:\"AJXP_USR_/admin\";b:1;}'),
-(8, 'admin', 'ajxp.roles.order', '$phpserial$a:1:{s:15:\"AJXP_USR_/admin\";i:1;}');
+(30, 'useruser1', 'ajxp.admin', '1'),
+(31, 'useruser1', 'ajxp.roles', '$phpserial$a:1:{s:15:\"AJXP_USR_/useruser1\";b:1;}'),
+(32, 'useruser1', 'ajxp.roles.order', '$phpserial$a:1:{s:15:\"AJXP_USR_/useruser1\";i:1;}'),
+(33, 'useruser1', 'ajxp.lock', '0'),
+(60, 'useruser2', 'ajxp.roles', '$phpserial$a:1:{s:16:\"AJXP_USR_/useruser2\";b:1;}'),
+(61, 'useruser2', 'ajxp.admin', '1'),
+(62, 'useruser2', 'ajxp.roles.order', '$phpserial$a:1:{s:16:\"AJXP_USR_/useruser2\";i:0;}'),
+(63, 'useruser2', 'ajxp.profile', 'admin'),
+(64, 'useruser3', 'ajxp.roles', '$phpserial$a:1:{s:16:\"AJXP_USR_/useruser3\";b:1;}'),
+(65, 'useruser3', 'ajxp.admin', '1'),
+(66, 'useruser3', 'ajxp.roles.order', '$phpserial$a:1:{s:16:\"AJXP_USR_/useruser3\";i:0;}'),
+(67, 'useruser3', 'ajxp.profile', 'admin');
 
 -- --------------------------------------------------------
 
@@ -639,7 +684,7 @@ ALTER TABLE `ajxp_index`
 -- AUTO_INCREMENT for table `ajxp_log`
 --
 ALTER TABLE `ajxp_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `ajxp_mail_queue`
@@ -675,13 +720,13 @@ ALTER TABLE `ajxp_user_bookmarks`
 -- AUTO_INCREMENT for table `ajxp_user_prefs`
 --
 ALTER TABLE `ajxp_user_prefs`
-  MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `ajxp_user_rights`
 --
 ALTER TABLE `ajxp_user_rights`
-  MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
