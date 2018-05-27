@@ -80,4 +80,3 @@ ADD ./data /var/www/data
 
 # Use baseimage-docker's init system.
 #CMD ["/bin/bash"]
-

@@ -75,6 +75,8 @@ EOPHP
 
 if [ ! -f /var/www/pydio/data/cache/first_run_passed ]; then
 
+cp /var/www/data/pydio.sql /var/www/data/pydio_modif.sql
+
 php /var/www/data/generate_pydio_hash.php 1 $PYDIO_USER1 $PYDIO_PASSWORD1 $PYDIO_SECRET1 
 php /var/www/data/generate_pydio_hash.php 2 $PYDIO_USER2 $PYDIO_PASSWORD2 $PYDIO_SECRET2
 php /var/www/data/generate_pydio_hash.php 3 $PYDIO_USER3 $PYDIO_PASSWORD3 $PYDIO_SECRET3
@@ -118,6 +120,7 @@ mkdir /wp5/recycle_bin
 
 else
 
+cp /var/www/data/user.sql /var/www/data/user_modif.sql
 
 php /var/www/data/update_pydio_hash.php 1 $PYDIO_USER1 $PYDIO_PASSWORD1 $PYDIO_SECRET1 
 php /var/www/data/update_pydio_hash.php 2 $PYDIO_USER2 $PYDIO_PASSWORD2 $PYDIO_SECRET2

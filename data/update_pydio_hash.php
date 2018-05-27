@@ -84,7 +84,7 @@ function pbkdf2_create_hash($password)
 
 $hash = pbkdf2_create_hash($password);
 
-$path_to_file = '/var/www/data/user.sql';
+$path_to_file = '/var/www/data/user_modif.sql';
 $file_contents = file_get_contents($path_to_file);
 
 switch ($usernb) {
