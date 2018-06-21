@@ -110,7 +110,7 @@ sed -i -e "s/MYSQL_PASSWORD/$PYDIO_DB_PASSWORD/g" /var/www/pydio/data/plugins/bo
 sed -i -e "s/MYSQL_DATABASE/$PYDIO_DB_NAME/g" /var/www/pydio/data/plugins/boot.conf/bootstrap.json
 
 echo "table $TABLENAME does not exist, try to create table..."
-mysql -u $PYDIO_DB_USER -p"$PYDIO_DB_PASSWORD" -h $PYDIO_DB_HOST < /var/www/data/pydio.sql
+mysql -u $PYDIO_DB_USER -p"$PYDIO_DB_PASSWORD" -h $PYDIO_DB_HOST < /var/www/data/pydio_modif.sql
 
 mkdir /wp/recycle_bin
 mkdir /wp2/recycle_bin
@@ -127,7 +127,7 @@ php /var/www/data/update_pydio_hash.php 2 $PYDIO_USER2 $PYDIO_PASSWORD2 $PYDIO_S
 php /var/www/data/update_pydio_hash.php 3 $PYDIO_USER3 $PYDIO_PASSWORD3 $PYDIO_SECRET3
 
 echo "Updating DB password"
-mysql -u $PYDIO_DB_USER -p"$PYDIO_DB_PASSWORD" -h $PYDIO_DB_HOST < /var/www/data/user.sql
+mysql -u $PYDIO_DB_USER -p"$PYDIO_DB_PASSWORD" -h $PYDIO_DB_HOST < /var/www/data/user_modif.sql
 
 fi
 
