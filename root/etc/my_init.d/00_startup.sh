@@ -24,15 +24,15 @@ file_env() {
 }
 
 file_env 'PYDIO_DB_PASSWORD'
-file_env '$PYDIO_USER1'
-file_env '$PYDIO_USER2'
-file_env '$PYDIO_USER3'
-file_env '$PYDIO_PASSWORD1'
-file_env '$PYDIO_PASSWORD2'
-file_env '$PYDIO_PASSWORD3'
-file_env '$PYDIO_SECRET1'
-file_env '$PYDIO_SECRET2'
-file_env '$PYDIO_SECRET3'
+file_env 'PYDIO_USER1'
+file_env 'PYDIO_USER2'
+file_env 'PYDIO_USER3'
+file_env 'PYDIO_PASSWORD1'
+file_env 'PYDIO_PASSWORD2'
+file_env 'PYDIO_PASSWORD3'
+file_env 'PYDIO_SECRET1'
+file_env 'PYDIO_SECRET2'
+file_env 'PYDIO_SECRET3'
 
 # permissions
 PUID=${PUID:-911}
