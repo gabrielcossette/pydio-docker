@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /usr/sbin/php-fpm7.0 -F >>/log/fpm.log 2>&1
+exec /usr/sbin/php-fpm7.0 -F -R >>/log/fpm.log 2>&1
